@@ -13,3 +13,11 @@ JavaScript, often abbreviated JS, is a programming language that is one of the c
 ### History of JavaScript
 
 JavaScript was initially created by Brendan Eich of NetScape and was first announced in a press release by Netscape in 1995. It has a bizarre history of naming; initially, it was named Mocha by the creator, which was later renamed LiveScript. In 1996, about a year later after the release, NetScape decided to rename it to JavaScript with hopes of capitalizing on the Java community (although JavaScript did not have any relationship with Java) and released Netscape 2.0 with the official support of JavaScript.
+
+### JavaScript Versions
+
+JavaScript was invented by Brendan Eich, and in 1997 it became an ECMA standard. ECMAScript is the official language name. ECMAScript versions include ES1, ES2, ES3, ES5, and ES6
+
+### How to run JavaScript
+
+JavaScript can be run in the browser by including the external script file using the `script` tag, writing it within the HTML page using the `script` tag again, or running it in the browser console.
