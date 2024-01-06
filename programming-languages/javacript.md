@@ -21,3 +21,7 @@ JavaScript was invented by Brendan Eich, and in 1997 it became an ECMA standard.
 ### How to run JavaScript
 
 JavaScript can be run in the browser by including the external script file using the `script` tag, writing it within the HTML page using the `script` tag again, or running it in the browser console.
+
+### Javascript Variables
+
+Most of the time, a JavaScript application needs to work with information. To store and represent this information in the JavaScript codebase, we use variables. A variable is a container for a value.
