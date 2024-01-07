@@ -25,3 +25,7 @@ JavaScript can be run in the browser by including the external script file using
 ### Javascript Variables
 
 Most of the time, a JavaScript application needs to work with information. To store and represent this information in the JavaScript codebase, we use variables. A variable is a container for a value.
+
+### Variable Declarations
+
+To use variables in JavaScript, we first need to create it i.e. declare a variable. To declare variables, we use one of the var, let, or const keywords.
