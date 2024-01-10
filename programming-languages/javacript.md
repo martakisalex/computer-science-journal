@@ -35,3 +35,59 @@ Constants are block-scoped, much like variables declared using the let keyword. 
 
 ### Hoisting
 JavaScript Hoisting refers to the process whereby the interpreter appears to move the declaration of functions, variables, or classes to the top of their scope, prior to execution of the code.
+
+## Dictionary
+
+### [just-in-time (JIT) compilation](https://en.wikipedia.org/wiki/Just-in-time_compilation)
+- **Just-in-time (JIT) compilation**, also referred to as **dynamic translation** or **run-time compilation**, is a process in computing where computer code is compiled during the execution of a program (at run time) rather than before execution.
+
+### [Lightweight programming language](https://en.wikipedia.org/wiki/Lightweight_programming_language)
+- **Lightweight programming languages** are designed to have small memory footprint, are easy to implement (important when porting a language to different computer systems), and/or have minimalist syntax and features.
+
+### [First-class Function](https://developer.mozilla.org/en-US/docs/Glossary/First-class_Function)
+- A programming language is said to have **First-class functions** when functions in that language are treated like any other variable. For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable.
+
+### [Prototype-based programming](https://developer.mozilla.org/en-US/docs/Glossary/Prototype-based_programming)
+- **Prototype-based programming** is a style of object-oriented programming in which classes are not explicitly defined, but rather derived by adding properties and methods to an instance of another class or, less frequently, adding them to an empty object. In simple words: this type of style allows the creation of an object without first defining its class.
+
+### [Object](https://developer.mozilla.org/en-US/docs/Glossary/Object)
+- An **Object** is a special type of value in JavaScript that can have connections with other values. Objects can be seen as a collection of properties. With the object literal syntax, a limited set of properties are initialized; then properties can be added and removed. Property values can be values of any type, including other objects, which enables building complex data structures. Properties are identified using key values. A key value is either a String value or a Symbol value. There are two types of object properties: The **data property** and the **accessor property**.
+
+### [Object Literal](https://techstacker.com/what-is-object-literal-javascript/)
+- An **Object Literal** is an object value that you *literally* write in your program/app. An Object Literal usually consists of a list of comma-separated name-value pairs (`property:value`), wrapped inside curly braces `{}`.
+
+### [Programming paradigms](https://en.wikipedia.org/wiki/Programming_paradigm)
+- **Programming paradigms** are a way to classify programming languages based on their features. Languages can be classified into multiple paradigms.
+
+Some paradigms are concerned mainly with implications for the execution model of the language, such as allowing side effects, or whether the sequence of operations is defined by the execution model. Other paradigms are concerned mainly with the way that code is organized, such as grouping a code into units along with the state that is modified by the code. Yet others are concerned mainly with the style of syntax and grammar.
+
+Some common programming paradigms include:
+
+- Imperative in which the programmer instructs the machine how to change its state,
+  - procedural which groups instructions into procedures,
+  - object-oriented which groups instructions with the part of the state they operate on,
+- Declarative in which the programmer merely declares properties of the desired result, but not how to compute it
+functional in which the desired result is declared as the value of a series of function applications,
+logic in which the desired result is declared as the answer to a question about a system of facts and rules,
+reactive in which the desired result is declared with data streams and the propagation of change
+
+### [Object-Oriented Programming (OOP)](https://developer.mozilla.org/en-US/docs/Glossary/OOP)
+- **Object-Oriented Programming** is an approach in programming in which data is encapsulated within objects and the object itself is operated on, rather than its component parts.
+
+### [Imperative programming](https://en.wikipedia.org/wiki/Imperative_programming)
+- In computer science, **imperative programming** is a programming paradigm of software that uses statements that change a program's state. In much the same way that the imperative mood in natural languages expresses commands, an imperative program consists of commands for the computer to perform. Imperative programming focuses on describing how a program operates step by step,[1] rather than on high-level descriptions of its expected results.
+
+### [Object-Oriented Programming (OOP)](https://developer.mozilla.org/en-US/docs/Glossary/OOP)
+- **Object-Oriented Programming** is an approach in programming in which data is encapsulated within objects and the object itself is operated on, rather than its component parts.
+
+### [Class](https://developer.mozilla.org/en-US/docs/Glossary/Class)
+- In object-oriented programming, a **class** defines an object's characteristics. Class is a template definition of an object's properties and methods, the "blueprint" from which other *more specific* instances of the object are drawn.
+
+### [Thread](https://developer.mozilla.org/en-US/docs/Glossary/Thread)
+- **Thread** in computer science is the execution of running multiple tasks or programs at the same time. Each unit capable of executing code is called a thread.
+
+### [Main thread](https://developer.mozilla.org/en-US/docs/Glossary/Main_thread)
+- The **main thread** is where a browser processes user events and paints. By default, the browser uses a single thread to run all the JavaScript in your page, as well as to perform layout, reflows, and garbage collection. This means that long-running JavaScript functions can block the thread, leading to an unresponsive page and a bad user experience. Unless intentionally using a web worker, such as a service worker, JavaScript runs on the main thread, so it's easy for a script to cause delays in event processing or painting. The less work required of the main thread, the more that thread can respond to user events, paint, and generally be responsive to the user.
+
+### [Dynamic typing](https://developer.mozilla.org/en-US/docs/Glossary/Dynamic_typing)
+- **Dynamically-typed languages** are those (like JavaScript) where the interpreter assigns variables a type at runtime based on the variable's value at the time.
