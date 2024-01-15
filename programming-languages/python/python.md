@@ -81,7 +81,6 @@ It is used for:
 ## Python Getting Started
 
 ### Python Install
-
 Many PCs and Macs will have python already installed.
 
 To check if you have python installed on a Linux or Mac, then on linux open the command line or on Mac open the Terminal and type:
@@ -90,7 +89,6 @@ To check if you have python installed on a Linux or Mac, then on linux open the 
 If you find that you do not have Python installed on your computer, then you can download it for free from the following [website](https://www.python.org/).
 
 ### Python Quickstart
-
 Python is an interpreted programming language, this means that as a developer you write Python (.py) files in a text editor and then put those files into the python interpreter to be executed.
 
 The way to run a python file is like this on the command line:
@@ -99,7 +97,6 @@ The way to run a python file is like this on the command line:
 Where "helloworld.py" is the name of your python file.
 
 ### The Python Command Line
-
 To test a short amount of code in python sometimes it is quickest and easiest not to write the code in a file. This is made possible because Python can be run as a command line itself.
 
 Type the following on the Windows, Mac or Linux command line:
