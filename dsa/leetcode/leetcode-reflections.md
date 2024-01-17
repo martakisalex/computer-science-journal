@@ -13,3 +13,22 @@ This Markdown file serves as a personal repository of insights, strategies, and 
 - **Additional Notes**: Any extra observations, such as comparisons to similar problems, alternative solutions explored, and references to helpful resources or discussions.
 
 This file is not just a record of problems solved but a reflection of my growth as a programmer. It's a living document, evolving with each problem I solve and each new insight I gain.
+
+## Template
+
+### [Name](link)
+
+#### **Problem Overview**:
+- 
+
+####  **Solution Approach**:
+-
+
+####  **Challenges & Overcoming Them**:
+-
+
+#### **Key Takeaways**:
+-
+
+#### **Additional Notes**:
+-
