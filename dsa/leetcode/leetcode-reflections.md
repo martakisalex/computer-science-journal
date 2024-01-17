@@ -19,16 +19,28 @@ This file is not just a record of problems solved but a reflection of my growth 
 ### [Name](link)
 
 #### **Problem Overview**:
-- 
+- **Difficulty**:
+- **Key Problem Aspects**:
+  - 
+- **Input/Output**:
+  - 
+- **Data Structures Used**:
+  - 
+- **Algorithms Used**:
+  - 
+- **Time Complexity**:
+  - 
+- **Space Complexity**:
+  - 
 
 ####  **Solution Approach**:
--
+- 
 
 ####  **Challenges & Overcoming Them**:
--
+- 
 
 #### **Key Takeaways**:
--
+- 
 
 #### **Additional Notes**:
--
+- 
