@@ -123,3 +123,74 @@ This file is not just a record of problems solved but a reflection of my growth 
 #### **Additional Notes**:
 - This solution is a classic example of the stack data structure being used to solve problems related to sequence processing and validation.
 - The approach can be extended or modified for similar problems involving nested structures or sequence validation.
+
+### [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
+
+#### **Problem Overview**:
+- **Difficulty**: Easy
+- **Key Problem Aspects**:
+  - Merging two sorted linked lists into one sorted linked list.
+- **Input/Output**:
+  - Input: Two sorted linked lists (`list1` and `list2`).
+  - Output: A single sorted linked list.
+- **Data Structures Used**:
+  - Linked Lists.
+- **Algorithms Used**:
+  - Two-pointer technique.
+- **Time Complexity**:
+  - O(n + m) - Linear, iterating through each element of both lists.
+- **Space Complexity**:
+  - O(1) - No additional space proportional to the input size is used.
+
+####  **Solution Approach**:
+- Utilized a sentinel (dummy) node to simplify the merging process and manage edge cases.
+- Employed a two-pointer approach, moving through both lists and appending the smaller value node to the merged list.
+- Handled the remaining elements in one of the lists after one list is fully traversed.
+
+####  **Challenges & Overcoming Them**:
+- Initial challenge with the terminating condition of the loop. Resolved by changing the condition from `and` to `or` to correctly handle the scenario when one list is longer than the other.
+- Incorrectly returning the opposite list when one of the input lists was empty. Corrected by returning the non-null list in such cases.
+
+#### **Key Takeaways**:
+- Understanding the importance of the loop's terminating condition in linked list manipulation.
+- The effectiveness of using a sentinel node in linked list problems to simplify edge case handling and make the code more readable.
+- Realizing the significance of carefully handling edge cases in algorithms, especially in data structure manipulations.
+
+#### **Additional Notes**:
+- This problem was a good example of the practical use of two-pointer technique in linked lists.
+- The experience highlights how small mistakes in logic, like the loop condition and return statements, can significantly impact the algorithm's correctness.
+
+### [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+
+#### **Problem Overview**:
+- **Difficulty**: Easy
+- **Key Problem Aspects**:
+  - Finding the maximum profit that can be made by buying and selling a stock on different days.
+- **Input/Output**:
+  - Input: An array `prices` where `prices[i]` is the price of a given stock on the `i`th day.
+  - Output: The maximum profit that can be achieved.
+- **Data Structures Used**:
+  - None beyond basic variables.
+- **Algorithms Used**:
+  - Single pass linear scan.
+- **Time Complexity**:
+  - O(n) - Linear, iterating through the array once.
+- **Space Complexity**:
+  - O(1) - Constant, using a fixed number of variables.
+
+####  **Solution Approach**:
+- Utilized `float("inf")` to initialize the lowest price to the highest possible value at the start.
+- Iterated over the price list, updating the lowest price when a lower price was found.
+- Calculated the maximum profit using `max()` function at each step by comparing the current profit with the difference between the current price and the lowest price found.
+
+####  **Challenges & Overcoming Them**:
+- Recognized the need to remove the unnecessary variable `highest_price`. Realized that once a new low price is found, the previous high price becomes irrelevant.
+
+#### **Key Takeaways**:
+- The use of `float("inf")` is helpful in initializing variables to a very high value for minimization problems.
+- The `max()` function in Python is efficient for comparing and updating the maximum value during iterations.
+- Simplifying the solution by removing redundant variables can make the code more efficient and easier to understand.
+
+#### **Additional Notes**:
+- This problem is a classic example of finding the maximum difference in an array, demonstrating the importance of single pass solutions and efficient variable usage.
+- The approach underscores the value of understanding problem constraints to optimize variable initialization and update logic.
