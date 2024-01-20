@@ -232,3 +232,112 @@ This file is not just a record of problems solved but a reflection of my growth 
 - The second method using `[::-1]` for string reversal is more Pythonic and succinct, showing the power of Python's string slicing capabilities.
 - The use of `join` with a generator expression for creating a normalized string is an elegant and efficient approach.
 - This problem illustrates the importance of attention to detail in string processing and the usefulness of Python's built-in string methods.
+
+### [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
+
+#### **Problem Overview**:
+- **Difficulty**: Easy
+- **Key Problem Aspects**:
+  - Inverting a binary tree so that the left and right children of all nodes are swapped.
+- **Input/Output**:
+  - Input: The root of a binary tree (`root`).
+  - Output: The root of the inverted binary tree.
+- **Data Structures Used**:
+  - Binary Tree.
+- **Algorithms Used**:
+  - Tree Traversal, Recursion.
+- **Time Complexity**:
+  - O(n) - Each node in the tree is visited once, where n is the number of nodes.
+- **Space Complexity**:
+  - O(h) - Recursion stack space, where h is the height of the tree.
+
+####  **Solution Approach**:
+- Implemented a recursive function to invert the tree.
+- Checked if the current node is not `None`. If not, swapped the left and right children of the node.
+- Recursively called the function on the left and right children of the current node.
+
+####  **Challenges & Overcoming Them**:
+- Initially used a `while` loop instead of an `if` statement, which was incorrect for the recursive approach.
+- Corrected the approach to apply recursion, calling the `invertTree` method on each child node.
+
+#### **Key Takeaways**:
+- Understanding that recursion is suitable for tree problems, as it naturally follows the tree's structure.
+- Recognizing the difference between using a `while` loop and an `if` statement in the context of recursion.
+- Time Complexity (O(n)): The function visits each node exactly once, hence the linear time complexity. In a tree traversal, the number of recursive calls is equal to the number of nodes.
+- Space Complexity (O(h)): The space complexity is determined by the height of the tree due to the recursion stack. In the worst case (a skewed tree), the recursion can go as deep as the tree's height.
+
+#### **Additional Notes**:
+- This problem is a fundamental example of understanding recursion in tree data structures.
+- The solution illustrates how a simple action (swapping left and right children) at each step can lead to a significant transformation of the entire tree structure.
+
+### [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
+
+#### **Problem Overview**:
+- **Difficulty**: Easy
+- **Key Problem Aspects**:
+  - Checking whether two strings are anagrams of each other.
+- **Input/Output**:
+  - Input: Two strings `s` and `t`.
+  - Output: `True` if `t` is an anagram of `s`, and `False` otherwise.
+- **Data Structures Used**:
+  - Dictionary (hash table).
+- **Algorithms Used**:
+  - Frequency counting.
+- **Time Complexity**:
+  - O(n + m) - Linear, where `n` is the length of string `s` and `m` is the length of string `t`.
+- **Space Complexity**:
+  - O(n) - Linear, or O(1) if considering the character set as fixed (e.g., ASCII).
+
+####  **Solution Approach**:
+- Created a dictionary `letter_dict` to count the frequency of each character in `s`.
+- Iterated through `t`, decreasing the count of each character in `letter_dict`. Returned `False` if a character was not found or its count was zero.
+- Checked if all counts in `letter_dict` were zero, which is necessary to confirm an anagram.
+
+####  **Challenges & Overcoming Them**:
+- Discovered that the order of conditions in `if letter_dict[letter] > 0 and letter in letter_dict` can lead to an error because the key might not exist in the dictionary. Learned that reversing the order to `if letter in letter_dict and letter_dict[letter] > 0` avoids this issue by ensuring the key exists before accessing its value.
+
+#### **Key Takeaways**:
+- The importance of considering the order of conditions in a logical statement to avoid key errors in dictionaries.
+- The necessity of a final check to ensure all character counts return to zero, which is crucial for validating anagrams.
+- The application of hash tables (dictionaries in Python) for efficient frequency counting in strings.
+
+#### **Additional Notes**:
+- This solution demonstrates a fundamental technique in string manipulation and comparison - frequency counting using hash tables.
+- It also highlights a typical use case where space complexity can be considered constant due to a limited character set, despite technically being O(n).
+
+### [Binary Search](https://leetcode.com/problems/binary-search/)
+
+#### **Problem Overview**:
+- **Difficulty**: Easy
+- **Key Problem Aspects**:
+  - Implementing binary search to find a target value within a sorted array.
+- **Input/Output**:
+  - Input: A sorted array `nums` and a target value `target`.
+  - Output: The index of `target` in `nums`, or `-1` if `target` is not found.
+- **Data Structures Used**:
+  - Array.
+- **Algorithms Used**:
+  - Binary Search.
+- **Time Complexity**:
+  - O(log(n)) - Logarithmic, as the search space is halved with each step.
+- **Space Complexity**:
+  - O(1) - Constant, as no extra space is used proportional to the input size.
+
+####  **Solution Approach**:
+- Used `left` and `right` pointers to maintain the current search space, improving clarity over using variables like `i` and `j`.
+- Calculated the midpoint `mid` as `(left + right) // 2` to determine the current element to compare with the target.
+- Used a `while left <= right:` loop, ensuring that the element at the current `mid` is also checked.
+- Incremented `left` to `mid + 1` and decremented `right` to `mid - 1` when adjusting the search space to prevent infinite loops.
+
+####  **Challenges & Overcoming Them**:
+- Initially failed to update `left` and `right` correctly, leading to incorrect results. Fixed by properly incrementing/decrementing the `mid` index.
+- Learned about an alternative midpoint calculation method to prevent integer overflow: `mid = left + (right - left) // 2`.
+
+#### **Key Takeaways**:
+- The importance of using clear and descriptive variable names like `left`, `right`, and `mid` in binary search algorithms.
+- Understanding why `while left <= right:` is preferable, as it includes the scenario where the target is at the current midpoint.
+- The alternative method to calculate `mid` is particularly relevant in languages with limited integer range, preventing overflow by adding half of the interval to the lower bound.
+
+#### **Additional Notes**:
+- This problem reinforces the fundamental concept of binary search and its efficiency in searching sorted arrays.
+- It also highlights common pitfalls in implementing binary search, such as proper updating of search boundaries and choosing the right loop condition.
