@@ -194,3 +194,41 @@ This file is not just a record of problems solved but a reflection of my growth 
 #### **Additional Notes**:
 - This problem is a classic example of finding the maximum difference in an array, demonstrating the importance of single pass solutions and efficient variable usage.
 - The approach underscores the value of understanding problem constraints to optimize variable initialization and update logic.
+
+### [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
+
+#### **Problem Overview**:
+- **Difficulty**: Easy
+- **Key Problem Aspects**:
+  - Determining if a string is a palindrome after converting all uppercase letters to lowercase and removing non-alphanumeric characters.
+- **Input/Output**:
+  - Input: A string `s`.
+  - Output: `True` if `s` is a palindrome, `False` otherwise.
+- **Data Structures Used**:
+  - String manipulation.
+- **Algorithms Used**:
+  - String filtering and comparison.
+- **Time Complexity**:
+  - O(n) - Linear, where n is the length of the string.
+- **Space Complexity**:
+  - O(n) - Linear, for storing the filtered and normalized string.
+
+####  **Solution Approach**:
+- Created a new string `new_string` to store the alphanumeric, lowercase version of the input string.
+- Used `isalnum()` to filter out non-alphanumeric characters and `lower()` to convert characters to lowercase.
+- Compared each character of the first half of `new_string` with its corresponding character in the second half.
+
+####  **Challenges & Overcoming Them**:
+- Initially used the wrong string (`s` instead of `new_string`) in the comparison loop.
+- Corrected an off-by-one error in the comparison loop by adjusting the index in `new_string[-i - 1]`.
+- Discovered an alternate method using string slicing `[::-1]` and `join` function for a more concise solution.
+
+#### **Key Takeaways**:
+- The `lower()` and `isalnum()` functions are efficient for normalizing strings in Python.
+- Recognized the importance of accurately indexing when comparing characters in a palindrome.
+- Learned a new method of reversing a string using slicing `[::-1]`, and constructing strings efficiently with `join`, which are valuable techniques for future string manipulation problems.
+
+#### **Additional Notes**:
+- The second method using `[::-1]` for string reversal is more Pythonic and succinct, showing the power of Python's string slicing capabilities.
+- The use of `join` with a generator expression for creating a normalized string is an elegant and efficient approach.
+- This problem illustrates the importance of attention to detail in string processing and the usefulness of Python's built-in string methods.
