@@ -343,3 +343,42 @@ This file is not just a record of problems solved but a reflection of my growth 
 #### **Additional Notes**:
 - This problem reinforces the fundamental concept of binary search and its efficiency in searching sorted arrays.
 - It also highlights common pitfalls in implementing binary search, such as proper updating of search boundaries and choosing the right loop condition.
+
+### [Flood Fill](https://leetcode.com/problems/flood-fill/)
+
+#### **Problem Overview**:
+- **Difficulty**: Easy
+- **Key Problem Aspects**:
+  - Performing a flood fill on an image represented by an integer grid, starting from a specific pixel.
+- **Edge Cases**:
+  - The starting pixel already being the new color.
+  - Empty image input.
+- **Input/Output**:
+  - Input: A 2D integer grid `image`, and integers `sr`, `sc`, `new_color`.
+  - Output: The modified `image` after performing the flood fill.
+- **Data Structures Used**:
+  - 2D Array (Grid).
+- **Algorithms Used**:
+  - Depth-First Search (DFS).
+- **Time Complexity**:
+  - O(n) - Linear, where n is the number of pixels in the image.
+- **Space Complexity**:
+  - O(h) - The maximum depth of the recursion stack, where h is the height of the stack.
+
+####  **Solution Approach**:
+- Used a recursive depth-first search (DFS) function to update pixels.
+- Implemented conditional statements to check boundaries and whether the current pixel matches the original color.
+- Handled edge cases such as an empty image and the starting pixel already being the new color.
+
+####  **Challenges & Overcoming Them**:
+- Learned to format multi-condition `if` statements in Python for readability.
+- Understood how to handle edge cases in a matrix-based problem.
+
+#### **Key Takeaways**:
+- The DFS algorithm is effective for problems involving grid traversal and updating connected components.
+- Properly handling edge cases is crucial to ensure the correctness of the solution.
+- Writing clear and readable conditional statements helps in understanding and debugging the code.
+
+#### **Additional Notes**:
+- This problem serves as a practical application of DFS in a grid, demonstrating how to traverse and manipulate 2D arrays.
+- The approach and considerations in this problem can be applied to similar matrix or grid-based problems.
