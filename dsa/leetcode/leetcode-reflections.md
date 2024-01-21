@@ -22,6 +22,8 @@ This file is not just a record of problems solved but a reflection of my growth 
 - **Difficulty**:
 - **Key Problem Aspects**:
   - 
+- **Edge Cases**:
+  - 
 - **Input/Output**:
   - 
 - **Data Structures Used**:
