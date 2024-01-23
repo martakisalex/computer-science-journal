@@ -53,7 +53,7 @@ This file is not just a record of problems solved but a reflection of my growth 
 
 ## Grind 75
 
-### [Two Sum](https://leetcode.com/problems/two-sum/)
+### 1. [Two Sum](https://leetcode.com/problems/two-sum/)
 
 #### **Problem Overview**:
 - **Difficulty**: Easy
@@ -94,7 +94,7 @@ This file is not just a record of problems solved but a reflection of my growth 
 - This approach highlights the importance of choosing the right data structure for the problem at hand.
 - It also demonstrates a common pattern in solving array-related problems where you need to find pairs that satisfy certain conditions.
 
-### [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
+### 2. [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
 
 #### **Problem Overview**:
 - **Difficulty**: Easy
@@ -130,7 +130,7 @@ This file is not just a record of problems solved but a reflection of my growth 
 - This solution is a classic example of the stack data structure being used to solve problems related to sequence processing and validation.
 - The approach can be extended or modified for similar problems involving nested structures or sequence validation.
 
-### [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
+### 3. [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
 
 #### **Problem Overview**:
 - **Difficulty**: Easy
@@ -166,7 +166,7 @@ This file is not just a record of problems solved but a reflection of my growth 
 - This problem was a good example of the practical use of two-pointer technique in linked lists.
 - The experience highlights how small mistakes in logic, like the loop condition and return statements, can significantly impact the algorithm's correctness.
 
-### [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+### 4. [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 
 #### **Problem Overview**:
 - **Difficulty**: Easy
@@ -201,7 +201,7 @@ This file is not just a record of problems solved but a reflection of my growth 
 - This problem is a classic example of finding the maximum difference in an array, demonstrating the importance of single pass solutions and efficient variable usage.
 - The approach underscores the value of understanding problem constraints to optimize variable initialization and update logic.
 
-### [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
+### 5. [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
 
 #### **Problem Overview**:
 - **Difficulty**: Easy
@@ -239,7 +239,7 @@ This file is not just a record of problems solved but a reflection of my growth 
 - The use of `join` with a generator expression for creating a normalized string is an elegant and efficient approach.
 - This problem illustrates the importance of attention to detail in string processing and the usefulness of Python's built-in string methods.
 
-### [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
+### 6. [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
 
 #### **Problem Overview**:
 - **Difficulty**: Easy
@@ -276,7 +276,7 @@ This file is not just a record of problems solved but a reflection of my growth 
 - This problem is a fundamental example of understanding recursion in tree data structures.
 - The solution illustrates how a simple action (swapping left and right children) at each step can lead to a significant transformation of the entire tree structure.
 
-### [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
+### 7. [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
 
 #### **Problem Overview**:
 - **Difficulty**: Easy
@@ -311,7 +311,7 @@ This file is not just a record of problems solved but a reflection of my growth 
 - This solution demonstrates a fundamental technique in string manipulation and comparison - frequency counting using hash tables.
 - It also highlights a typical use case where space complexity can be considered constant due to a limited character set, despite technically being O(n).
 
-### [Binary Search](https://leetcode.com/problems/binary-search/)
+### 8. [Binary Search](https://leetcode.com/problems/binary-search/)
 
 #### **Problem Overview**:
 - **Difficulty**: Easy
@@ -348,7 +348,7 @@ This file is not just a record of problems solved but a reflection of my growth 
 - This problem reinforces the fundamental concept of binary search and its efficiency in searching sorted arrays.
 - It also highlights common pitfalls in implementing binary search, such as proper updating of search boundaries and choosing the right loop condition.
 
-### [Flood Fill](https://leetcode.com/problems/flood-fill/)
+### 9. [Flood Fill](https://leetcode.com/problems/flood-fill/)
 
 #### **Problem Overview**:
 - **Difficulty**: Easy
@@ -387,7 +387,7 @@ This file is not just a record of problems solved but a reflection of my growth 
 - This problem serves as a practical application of DFS in a grid, demonstrating how to traverse and manipulate 2D arrays.
 - The approach and considerations in this problem can be applied to similar matrix or grid-based problems.
 
-### [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
+### 10. [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
 
 #### **Problem Overview**:
 - **Difficulty**: Easy
@@ -424,7 +424,7 @@ This file is not just a record of problems solved but a reflection of my growth 
 - This problem is a good example of using recursion to simplify complex tree-based computations.
 - It demonstrates the importance of considering each node's properties (height and balance) in relation to its subtree for problem-solving in binary trees.
 
-### [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+### 11. [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
 
 #### **Problem Overview**:
 - **Difficulty**: Easy
@@ -460,7 +460,7 @@ This file is not just a record of problems solved but a reflection of my growth 
 - This problem is a classic example of a pointer algorithm in linked lists and demonstrates an important technique in the detection of cycles.
 - The approach is widely applicable in various problems involving linked lists, particularly in cycle detection and related challenges.
 
-### [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
+### 12. [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
 
 #### **Problem Overview**:
 - **Difficulty**: Easy
