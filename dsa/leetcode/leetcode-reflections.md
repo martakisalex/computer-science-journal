@@ -382,3 +382,114 @@ This file is not just a record of problems solved but a reflection of my growth 
 #### **Additional Notes**:
 - This problem serves as a practical application of DFS in a grid, demonstrating how to traverse and manipulate 2D arrays.
 - The approach and considerations in this problem can be applied to similar matrix or grid-based problems.
+
+### [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
+
+#### **Problem Overview**:
+- **Difficulty**: Easy
+- **Key Problem Aspects**:
+  - Determining if a binary tree is height-balanced, meaning the depths of any two leaf nodes differ by no more than one.
+- **Input/Output**:
+  - Input: The root of a binary tree (`root`).
+  - Output: `True` if the tree is balanced, `False` otherwise.
+- **Data Structures Used**:
+  - Binary Tree.
+- **Algorithms Used**:
+  - Depth-First Search (DFS) in a recursive manner.
+- **Time Complexity**:
+  - O(n) - The algorithm traverses each node once.
+- **Space Complexity**:
+  - O(h) - The recursion stack can go as deep as the height of the tree.
+
+####  **Solution Approach**:
+- Implemented a recursive function `check` that traverses the tree using DFS.
+- For each node, the function checks the height and balance of its left and right subtrees.
+- Used the `abs()` function to check if the height difference between left and right subtrees exceeds 1, indicating imbalance.
+- Employed the `max()` function to determine the height of the current node as the maximum height of its children plus one.
+
+####  **Challenges & Overcoming Them**:
+- Understanding the use of DFS in a recursive manner for tree traversal.
+- Realizing the importance of returning both the height and balance status at each node for efficient computation.
+
+#### **Key Takeaways**:
+- The `abs()` function is crucial in this context for easily determining the absolute difference in height between two subtrees, simplifying the balance check.
+- The `max()` function helps in calculating the height of the current node by identifying the taller subtree. The height of a node is based on the height of its tallest child.
+- The clever use of returning a tuple (height, balance status) at each step streamlines the process and avoids unnecessary computations.
+
+#### **Additional Notes**:
+- This problem is a good example of using recursion to simplify complex tree-based computations.
+- It demonstrates the importance of considering each node's properties (height and balance) in relation to its subtree for problem-solving in binary trees.
+
+### [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+
+#### **Problem Overview**:
+- **Difficulty**: Easy
+- **Key Problem Aspects**:
+  - Detecting if a singly-linked list has a cycle.
+- **Input/Output**:
+  - Input: The head of a singly-linked list (`head`).
+  - Output: `True` if there's a cycle in the list, `False` otherwise.
+- **Data Structures Used**:
+  - Singly-Linked List.
+- **Algorithms Used**:
+  - Fast and Slow Pointer Technique.
+- **Time Complexity**:
+  - O(n) - In the worst case, the fast pointer traverses the entire list.
+- **Space Complexity**:
+  - O(1) - No additional space is used, pointers only.
+
+####  **Solution Approach**:
+- Utilized two pointers, `slow` and `fast`, both initially pointing at the head of the list.
+- `slow` moves one step at a time, while `fast` moves two steps.
+- The loop continues as long as `fast` and `fast.next` are not null, which prevents null reference errors when accessing `fast.next.next`.
+- If `slow` and `fast` meet at any point, it indicates a cycle in the list.
+
+####  **Challenges & Overcoming Them**:
+- Understanding the significance of moving `fast` two steps and `slow` one step and how it helps in detecting a cycle.
+- Ensuring that the loop condition checks for `fast` and `fast.next` to avoid null reference exceptions.
+
+#### **Key Takeaways**:
+- The Fast and Slow Pointer Technique is an efficient way to detect cycles in a linked list.
+- Careful consideration of loop conditions is crucial to avoid errors, especially in pointer manipulation problems.
+
+#### **Additional Notes**:
+- This problem is a classic example of a pointer algorithm in linked lists and demonstrates an important technique in the detection of cycles.
+- The approach is widely applicable in various problems involving linked lists, particularly in cycle detection and related challenges.
+
+### [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
+
+#### **Problem Overview**:
+- **Difficulty**: Easy
+- **Key Problem Aspects**:
+  - Implementing a queue using standard stack operations (push to back, peek/pop from front, size, and is empty).
+- **Input/Output**:
+  - Various queue operations including `push`, `pop`, `peek`, and `empty`.
+- **Data Structures Used**:
+  - List in Python (as a stack).
+- **Algorithms Used**:
+  - Stack-based approach to mimic queue operations.
+- **Time Complexity**:
+  - Push: O(1) - Appending to a list is a constant time operation.
+  - Pop: O(n) - Popping from the front of a list involves shifting all elements, which is O(n).
+  - Peek: O(1) - Accessing the first element is constant time.
+  - Empty: O(1) - Checking if the list is empty is constant time.
+- **Space Complexity**:
+  - O(n) - The space complexity is proportional to the number of elements in the queue.
+
+####  **Solution Approach**:
+- Implemented a queue using a list, with methods for `push`, `pop`, `peek`, and `empty`.
+- The `push` method appends elements to the end of the list.
+- The `pop` and `peek` methods operate on the front of the list, returning and accessing the first element, respectively.
+- The `empty` method checks if the list (queue) is empty, returning a boolean value.
+
+####  **Challenges & Overcoming Them**:
+- Ensuring that the queue operations adhere to the First-In-First-Out (FIFO) principle using only stack operations.
+- Efficiently implementing the `pop` operation, which is inherently less efficient in a list used as a stack.
+
+#### **Key Takeaways**:
+- The use of the `empty` method in other methods (`pop` and `peek`) to check if the queue is empty before performing operations, which enhances code readability and safety.
+- Understanding the trade-offs in implementing a queue with a list, especially in terms of the time complexity of different operations.
+
+#### **Additional Notes**:
+- While the list in Python is used as a stack here, it's important to note that the `pop(0)` operation is not efficient for large lists due to the need to shift all elements.
+- This implementation serves as a good exercise in understanding the underlying mechanics of different data structures and their operations.
