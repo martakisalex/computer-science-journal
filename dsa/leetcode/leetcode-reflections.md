@@ -14,6 +14,8 @@ This Markdown file serves as a personal repository of insights, strategies, and 
 
 This file is not just a record of problems solved but a reflection of my growth as a programmer. It's a living document, evolving with each problem I solve and each new insight I gain.
 
+<!--
+
 ## Template
 
 ### [Name](link)
@@ -46,6 +48,8 @@ This file is not just a record of problems solved but a reflection of my growth 
 
 #### **Additional Notes**:
 - 
+
+-->
 
 ## Grind 75
 
