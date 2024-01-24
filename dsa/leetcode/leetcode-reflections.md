@@ -387,7 +387,44 @@ This file is not just a record of problems solved but a reflection of my growth 
 - This problem serves as a practical application of DFS in a grid, demonstrating how to traverse and manipulate 2D arrays.
 - The approach and considerations in this problem can be applied to similar matrix or grid-based problems.
 
-### 10. [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
+### 10. [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
+
+#### **Problem Overview**:
+- **Difficulty**: Medium
+- **Key Problem Aspects**:
+  - Finding the lowest common ancestor (LCA) of two given nodes in a binary tree.
+- **Input/Output**:
+  - Input: The root of a binary tree (`root`) and two tree nodes (`p` and `q`).
+  - Output: The LCA of nodes `p` and `q`.
+- **Data Structures Used**:
+  - Binary Tree.
+- **Algorithms Used**:
+  - Recursion.
+- **Time Complexity**:
+  - O(n) - The algorithm may visit each node in the worst case.
+- **Space Complexity**:
+  - O(h) - The recursion stack can go as deep as the height of the tree.
+  - O(log(n)) for a balanced tree.
+  - O(n) for a skewed tree (worst case).
+
+####  **Solution Approach**:
+- Implemented a recursive function to find the LCA.
+- The function returns the current node if it matches either `p` or `q`, or if it reaches a leaf node (`None`).
+- Recursively searches for `p` and `q` in the left and right subtrees.
+- If both left and right recursive calls return non-null values, the current node is the LCA.
+- If only one of the recursive calls returns a non-null value, that value is propagated up as the potential LCA.
+
+#### **Key Takeaways**:
+- Understanding how recursion can effectively traverse a binary tree to find the LCA.
+- Learning the importance of checking both subtrees and how the presence of `p` and `q` in different subtrees indicates the current node is the LCA.
+- Realizing that the LCA is the deepest node at which the paths to `p` and `q` diverge.
+
+#### **Additional Notes**:
+- This problem is a classic example of applying recursive tree traversal for complex tree-based computations.
+- It also illustrates an important concept in tree algorithms, the use of recursion to simplify the process of searching and comparing nodes in a tree.
+
+
+### 11. [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
 
 #### **Problem Overview**:
 - **Difficulty**: Easy
@@ -424,7 +461,7 @@ This file is not just a record of problems solved but a reflection of my growth 
 - This problem is a good example of using recursion to simplify complex tree-based computations.
 - It demonstrates the importance of considering each node's properties (height and balance) in relation to its subtree for problem-solving in binary trees.
 
-### 11. [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+### 12. [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
 
 #### **Problem Overview**:
 - **Difficulty**: Easy
@@ -460,7 +497,7 @@ This file is not just a record of problems solved but a reflection of my growth 
 - This problem is a classic example of a pointer algorithm in linked lists and demonstrates an important technique in the detection of cycles.
 - The approach is widely applicable in various problems involving linked lists, particularly in cycle detection and related challenges.
 
-### 12. [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
+### 13. [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/)
 
 #### **Problem Overview**:
 - **Difficulty**: Easy
@@ -497,3 +534,104 @@ This file is not just a record of problems solved but a reflection of my growth 
 #### **Additional Notes**:
 - While the list in Python is used as a stack here, it's important to note that the `pop(0)` operation is not efficient for large lists due to the need to shift all elements.
 - This implementation serves as a good exercise in understanding the underlying mechanics of different data structures and their operations.
+
+### 14. [First Bad Version](https://leetcode.com/problems/first-bad-version/)
+
+#### **Problem Overview**:
+- **Difficulty**: Easy
+- **Key Problem Aspects**:
+  - Finding the first bad version in a series of versions using a provided API `isBadVersion`.
+- **Input/Output**:
+  - Input: The total number of versions `n`.
+  - Output: The first bad version number.
+- **Data Structures Used**:
+  - None, just variables for binary search.
+- **Algorithms Used**:
+  - Binary Search.
+- **Time Complexity**:
+  - O(log(n)) - Binary search cuts the problem size in half with each step.
+- **Space Complexity**:
+  - O(1) - Constant space is used.
+
+####  **Solution Approach**:
+- Implemented binary search with two pointers, `left` and `right`.
+- In the loop, `mid` is calculated and checked if it's a bad version using `isBadVersion`.
+- If `mid` is bad, search the left half; otherwise, search the right half.
+
+#### **Explanation of Conditional Logic**:
+- When `isBadVersion(mid)` returns `True`, it means that `mid` could potentially be the first bad version, or the first bad version could be to its left. Thus, `right` is set to `mid` to continue searching in the left half, including `mid`.
+- When `isBadVersion(mid)` is `False`, it means that `mid` and all versions before it are good. Therefore, the first bad version must be after `mid`. This is why `left` is set to `mid + 1`, as it safely excludes `mid` and all previous versions.
+- This approach ensures that the first bad version is correctly identified while minimizing the number of API calls.
+
+#### **Key Takeaways**:
+- Understanding the intricacies of binary search and how subtle changes in the condition and update steps can optimize performance.
+- The importance of minimizing API calls in scenarios where each call may be costly or have a performance impact.
+
+#### **Additional Notes**:
+- This problem is an excellent example of applying binary search in a practical scenario, demonstrating the importance of efficient searching in large datasets.
+- The solution illustrates a common pattern in optimization: carefully choosing conditions and updates to minimize the number of operations.
+
+### 15. [Ransom Note](https://leetcode.com/problems/ransom-note/)
+
+#### **Problem Overview**:
+- **Difficulty**: Easy
+- **Key Problem Aspects**:
+  - Determining if the `ransomNote` can be constructed from the letters of the `magazine`.
+- **Input/Output**:
+  - Input: Two strings, `ransomNote` and `magazine`.
+  - Output: `True` if `ransomNote` can be constructed from `magazine`, `False` otherwise.
+- **Data Structures Used**:
+  - Dictionary (hash table).
+- **Algorithms Used**:
+  - Frequency counting using hash table.
+- **Time Complexity**:
+  - O(n + m) - Where `n` is the length of `magazine` and `m` is the length of `ransomNote`.
+- **Space Complexity**:
+  - O(1) - The dictionary will contain at most 26 key-value pairs (considering only lowercase English letters).
+
+####  **Solution Approach**:
+- Created a dictionary `magazine_dict` to store the frequency of each character in the `magazine`.
+- Iterated through each character in `ransomNote`:
+  - If the character is in `magazine_dict` and its count is not zero, decremented the count.
+  - Otherwise, returned `False`, indicating the `ransomNote` cannot be constructed.
+
+#### **Key Takeaways**:
+- The use of a hash table to efficiently count and keep track of character frequencies.
+- Understanding the importance of checking character availability in `magazine_dict` before decrementing to avoid invalid counts.
+
+#### **Additional Notes**:
+- This problem highlights the effectiveness of using hash tables for frequency counting in string manipulation tasks.
+- The approach is a common pattern in solving problems that involve checking if one string can be formed from another.
+
+### 16. [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
+
+#### **Problem Overview**:
+- **Difficulty**: Easy
+- **Key Problem Aspects**:
+  - Calculating the number of distinct ways to climb `n` steps, with the ability to climb either 1 or 2 steps at a time.
+- **Input/Output**:
+  - Input: An integer `n`, representing the total number of steps.
+  - Output: The total number of distinct ways to climb to the top.
+- **Data Structures Used**:
+  - Basic integer variables.
+- **Algorithms Used**:
+  - Dynamic Programming approach.
+- **Time Complexity**:
+  - O(n) - Linear, iterating through the steps once.
+- **Space Complexity**:
+  - O(1) - Constant space, using a fixed number of variables.
+
+####  **Solution Approach**:
+- Implemented an iterative solution with dynamic programming principles.
+- Used two variables, `prev_steps` and `current_steps`, to keep track of the number of ways to reach the current and previous steps.
+- Iterated from the third step to `n` (inclusive), updating `prev_steps` and `current_steps` at each step.
+- Ensured that the loop correctly iterates the appropriate number of times, which is crucial for calculating the correct number of ways.
+
+#### **Key Takeaways**:
+- The importance of correctly setting up the for-loop, particularly its start and end conditions, to cover all cases.
+- The solution illustrates an efficient way to solve problems that would otherwise have exponential time complexity, by using a bottom-up approach with iteration.
+- Understanding how to transform a potentially recursive problem into an iterative one to optimize space usage.
+
+#### **Additional Notes**:
+- This problem is a classic example of Dynamic Programming, demonstrating how to break down a problem into smaller, overlapping sub-problems.
+- The approach can be applied to similar problems where the solution at a given step depends on the solutions at previous steps.
