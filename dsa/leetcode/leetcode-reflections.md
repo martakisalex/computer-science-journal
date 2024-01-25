@@ -710,7 +710,7 @@ This file is not just a record of problems solved but a reflection of my growth 
 - This problem illustrates a fundamental technique in linked list manipulation — reversing the direction of links using an iterative approach.
 - The pattern of using a temporary variable to hold the next node before changing links is a common and crucial technique in many linked list problems.
 
-### [Majority Element](https://leetcode.com/problems/majority-element/)
+### 19. [Majority Element](https://leetcode.com/problems/majority-element/)
 
 #### **Problem Overview**:
 - **Difficulty**: Easy
