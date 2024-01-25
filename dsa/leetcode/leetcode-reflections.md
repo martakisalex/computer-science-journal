@@ -635,3 +635,113 @@ This file is not just a record of problems solved but a reflection of my growth 
 #### **Additional Notes**:
 - This problem is a classic example of Dynamic Programming, demonstrating how to break down a problem into smaller, overlapping sub-problems.
 - The approach can be applied to similar problems where the solution at a given step depends on the solutions at previous steps.
+
+### 17. [Longest Palindrome](https://leetcode.com/problems/longest-palindrome/)
+
+#### **Problem Overview**:
+- **Difficulty**: Easy
+- **Key Problem Aspects**:
+  - Finding the length of the longest palindrome that can be built with the letters in a given string `s`.
+- **Input/Output**:
+  - Input: A string `s`.
+  - Output: The length of the longest palindrome possible.
+- **Data Structures Used**:
+  - Dictionary (hash table).
+- **Algorithms Used**:
+  - Frequency counting using hash table.
+- **Time Complexity**:
+  - O(n) - Linear, iterating through each character in the string once.
+- **Space Complexity**:
+  - O(1) or O(c) - Where `c` is the size of the character set. The dictionary will contain at most `c` key-value pairs, where `c` is fixed for a specific character set (e.g., 26 for lowercase English letters).
+
+####  **Solution Approach**:
+- Used a dictionary `letters_count` to count the frequency of each character in `s`.
+- Iterated through the dictionary to calculate the length of the longest palindrome:
+  - Added the count of characters with even frequencies directly to `longest_length`.
+  - For characters with odd frequencies, added their count minus one, and set a flag `has_odd`.
+- If any odd counts were found, one additional character could be placed in the center of the palindrome.
+
+#### **Explanation of Modulo Operator and Flag Usage**:
+- The modulo operator (`%`) is used to determine if the count of a character is odd or even.
+- If `letters_count[letter] % 2 == 0`, it implies an even count. For odd counts, we add one less than the count to `longest_length` and raise the `has_odd` flag.
+- The `has_odd` flag indicates whether at least one character with an odd count is present, allowing for a single odd-count character to be used as the center of the palindrome.
+
+#### **Key Takeaways**:
+- Understanding the significance of the modulo operator in differentiating between even and odd counts.
+- The use of a flag (`has_odd`) to track the presence of odd-count characters efficiently.
+- The importance of considering each character's count for constructing a palindrome with the maximum possible length.
+
+#### **Additional Notes**:
+- This problem is a good exercise in understanding the construction rules of a palindrome and applying frequency counting techniques.
+- The approach demonstrates a pattern often used in problems where constructing an optimal structure based on frequency counts is required.
+
+### 18. [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
+
+#### **Problem Overview**:
+- **Difficulty**: Easy
+- **Key Problem Aspects**:
+  - Reversing a singly-linked list.
+- **Input/Output**:
+  - Input: The head of a singly-linked list (`head`).
+  - Output: The head of the reversed list.
+- **Data Structures Used**:
+  - Singly-Linked List.
+- **Algorithms Used**:
+  - Iterative approach.
+- **Time Complexity**:
+  - O(n) - Linear, traversing the linked list once.
+- **Space Complexity**:
+  - O(1) - Constant space, using only pointers.
+
+####  **Solution Approach**:
+- Initiated two pointers, `prev_node` as `None` and `current_node` as `head`.
+- Iterated over the list, reversing the link of each node to its predecessor:
+  - Stored the next node (`next_node = current_node.next`).
+  - Set `current_node.next` to `prev_node`.
+  - Updated `prev_node` and `current_node` for the next iteration.
+- Returned `prev_node` as the new head of the reversed list.
+
+#### **Key Insights**:
+- The importance of correctly managing pointers during iteration to avoid losing access to parts of the list.
+- Noting that each line in the while loop depends on the variable from the previous line, demonstrating a clear logical sequence in pointer manipulation.
+- Returning `prev_node` at the end ensures the correct head of the reversed list is returned, even when the original list is empty.
+
+#### **Additional Notes**:
+- This problem illustrates a fundamental technique in linked list manipulation — reversing the direction of links using an iterative approach.
+- The pattern of using a temporary variable to hold the next node before changing links is a common and crucial technique in many linked list problems.
+
+### [Majority Element](https://leetcode.com/problems/majority-element/)
+
+#### **Problem Overview**:
+- **Difficulty**: Easy
+- **Key Problem Aspects**:
+  - Finding the majority element in an array, which appears more than `n/2` times.
+- **Input/Output**:
+  - Input: An array of integers `nums`.
+  - Output: The majority element.
+- **Data Structures Used**:
+  - Array.
+- **Algorithms Used**:
+  - Boyer-Moore Voting Algorithm.
+- **Time Complexity**:
+  - O(n) - Linear, as the algorithm traverses the array once.
+- **Space Complexity**:
+  - O(1) - Constant space, using only a couple of variables.
+
+####  **Solution Approach**:
+- Implemented the Boyer-Moore Voting Algorithm to find the majority element.
+- Maintained two variables: `maj_element` to store the current candidate for majority element and `vote` to track its count.
+- Iterated through the array:
+  - If `vote` is zero, set `maj_element` to the current number and `vote` to 1.
+  - If the current number is equal to `maj_element`, incremented `vote`.
+  - Otherwise, decremented `vote`.
+- The number in `maj_element` after the iteration is the majority element.
+
+#### **Key Insights**:
+- The algorithm cleverly uses a voting mechanism, incrementing or decrementing the count based on whether the current element matches the current candidate for majority element.
+- Resetting the vote count when it reaches zero allows for dynamically changing the candidate for the majority element.
+- This approach ensures that the final candidate in `maj_element` is indeed the majority element, as it survives the entire iteration process.
+
+#### **Additional Notes**:
+- The Boyer-Moore Voting Algorithm is an elegant and efficient method for finding the majority element, particularly useful in scenarios where space efficiency is paramount.
+- This problem demonstrates a classic example of using algorithmic techniques to reduce space complexity in array manipulation tasks.
