@@ -745,3 +745,39 @@ This file is not just a record of problems solved but a reflection of my growth 
 #### **Additional Notes**:
 - The Boyer-Moore Voting Algorithm is an elegant and efficient method for finding the majority element, particularly useful in scenarios where space efficiency is paramount.
 - This problem demonstrates a classic example of using algorithmic techniques to reduce space complexity in array manipulation tasks.
+
+### 20. [Add Binary](https://leetcode.com/problems/add-binary/)
+
+#### **Problem Overview**:
+- **Difficulty**: Easy
+- **Key Problem Aspects**:
+  - Adding two binary strings and returning the result as a binary string.
+- **Input/Output**:
+  - Input: Two binary strings `a` and `b`.
+  - Output: The sum of `a` and `b` as a binary string.
+- **Data Structures Used**:
+  - String manipulation.
+- **Algorithms Used**:
+  - Simulation of binary addition.
+- **Time Complexity**:
+  - O(n + m) - Where `n` is the length of string `a` and `m` is the length of string `b`.
+- **Space Complexity**:
+  - O(max(n, m)) - The length of the result string could be at most `max(n, m) + 1`.
+
+####  **Solution Approach**:
+- Initialized pointers `i` and `j` at the ends of strings `a` and `b` to simulate addition from the least significant bit.
+- Used a `while` loop to iterate through the strings as long as there is at least one character left in either string or there is a carry.
+- Summed up the bits pointed by `i` and `j`, along with the `carry`.
+
+#### **Explanation of Key Lines**:
+- `carry = total // 2`: This line calculates the carry for the next iteration. Since we're adding binary digits, the carry will be `1` if the sum is `2` or `3` (since `2 // 2 = 1` and `3 // 2 = 1`), and `0` if the sum is `0` or `1` (since `0 // 2 = 0` and `1 // 2 = 0`).
+- `result = str(total % 2) + result`: This line calculates the current digit to be added to the result. The `% 2` operation gives the remainder when `total` is divided by `2`, which effectively determines the least significant bit of the sum. This bit is then converted to a string and concatenated to the left side of the `result`, building the binary result from right to left.
+
+#### **Key Takeaways**:
+- Understanding how to simulate binary addition manually, handling carries between digits.
+- The importance of iterating from the least significant bit to the most significant bit in binary operations.
+- Utilizing integer division `//` and modulus `%` to manage carries and current digits effectively in binary addition.
+
+#### **Additional Notes**:
+- This problem is an excellent example of applying basic arithmetic operations and logic to string manipulation, demonstrating the versatility of programming constructs.
+- The approach highlights a common pattern in problems involving numerical operations on non-standard representations, like binary strings.
