@@ -781,3 +781,70 @@ This file is not just a record of problems solved but a reflection of my growth 
 #### **Additional Notes**:
 - This problem is an excellent example of applying basic arithmetic operations and logic to string manipulation, demonstrating the versatility of programming constructs.
 - The approach highlights a common pattern in problems involving numerical operations on non-standard representations, like binary strings.
+
+### 21. [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)
+
+#### **Problem Overview**:
+- **Difficulty**: Easy
+- **Key Problem Aspects**:
+  - Finding the diameter of a binary tree, defined as the length of the longest path between any two nodes in the tree. This path may or may not pass through the root.
+- **Input/Output**:
+  - Input: The root of a binary tree (`root`).
+  - Output: The diameter of the tree.
+- **Data Structures Used**:
+  - Binary Tree.
+- **Algorithms Used**:
+  - Depth-First Search (DFS).
+- **Time Complexity**:
+  - O(n) - Each node is visited once.
+- **Space Complexity**:
+  - O(h) - The recursion stack may go as deep as the height of the tree.
+
+####  **Solution Approach**:
+- Utilized a Depth-First Search (DFS) helper function to explore the tree.
+- Created an instance variable `self.max_diameter` to keep track of the maximum diameter found during the traversal.
+- In the `dfs` function:
+  - Returned 0 for null nodes to signify the end of a path.
+  - Recursively obtained the maximum path lengths from the left and right children.
+  - Updated `self.max_diameter` with the sum of left and right path lengths if it's larger than the current maximum.
+  - Returned the maximum of the left or right path length plus one to account for the current node's depth.
+
+#### **Key Insights**:
+- The use of an instance variable (`self.max_diameter`) allows tracking the maximum diameter found across recursive calls without needing to pass it as an argument.
+- The `dfs` helper function, being a nested function, can access and modify the instance variable, facilitating the update of the maximum diameter found.
+- Returning `max(left, right) + 1` from each `dfs` call ensures that only the longest path from each node contributes to the diameter calculation.
+
+#### **Additional Notes**:
+- This problem is an excellent example of how a global (or in this case, instance-wide) variable can be used in conjunction with a recursive function to maintain state across recursive calls.
+- The solution illustrates a common pattern in tree problems where a value needs to be updated based on recursive calls' results, showcasing the utility of Depth-First Search in such scenarios.
+
+### 22. [Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)
+
+#### **Problem Overview**:
+- **Difficulty**: Easy
+- **Key Problem Aspects**:
+  - Identifying the middle node in a singly linked list. In cases with two middle nodes, the second one should be returned.
+- **Input/Output**:
+  - Input: The `head` of a singly linked list.
+  - Output: The middle node of the linked list. If there are two middle nodes, the second one is returned.
+- **Data Structures Used**:
+  - Singly Linked List.
+- **Algorithms Used**:
+  - Two-pointer technique (slow and fast pointers).
+- **Time Complexity**:
+  - O(n), where `n` is the number of nodes in the linked list. The fast pointer, moving at twice the speed of the slow pointer, ensures the list is traversed only once.
+- **Space Complexity**:
+  - O(1), as the space used does not scale with the size of the input linked list.
+
+#### **Solution Approach**:
+- Initiated two pointers, `slow` and `fast`, both pointing to `head` at the start.
+- Advanced `slow` by one node and `fast` by two nodes in each step until `fast` reaches the end of the list or becomes `null`.
+- By the time `fast` reaches the end, `slow` will be at the middle of the list. In cases with an even number of nodes, when `fast` becomes `null`, `slow` will be at the second middle node, fulfilling the problem's requirement.
+
+#### **Key Insights**:
+- The loop condition `while fast and fast.next:` is crucial. Using just `while fast:` could cause an error when attempting to access `fast.next.next` if `fast` is at the last node. Similarly, `while fast.next:` alone might not account for `fast` becoming `None`, leading to a potential error when checking `fast.next`.
+- This approach ensures that `slow` ends up at the second middle node in lists with an even number of nodes because `fast` moves two steps at a time. When `fast` can no longer advance two steps (either because it hits `None` or its next is `None`), the loop ends, leaving `slow` at the second middle node.
+
+#### **Additional Notes**:
+- This problem is a classic example of the utility of the fast and slow pointer technique in solving linked list problems, especially those involving the identification of specific nodes based on list length.
+- The simplicity and elegance of the solution highlight the power of pointer manipulation in algorithm design for linked list data structures. The careful consideration of loop conditions to avoid errors is a key aspect of robust algorithm implementation.
