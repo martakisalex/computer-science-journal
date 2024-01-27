@@ -848,3 +848,39 @@ This file is not just a record of problems solved but a reflection of my growth 
 #### **Additional Notes**:
 - This problem is a classic example of the utility of the fast and slow pointer technique in solving linked list problems, especially those involving the identification of specific nodes based on list length.
 - The simplicity and elegance of the solution highlight the power of pointer manipulation in algorithm design for linked list data structures. The careful consideration of loop conditions to avoid errors is a key aspect of robust algorithm implementation.
+
+### 23. [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+
+#### **Problem Overview**:
+- **Difficulty**: Easy
+- **Key Problem Aspects**:
+  - Finding the maximum depth (or height) of a binary tree.
+- **Edge Cases**:
+  - The tree is empty (`root` is `None`), in which case the depth is `0`.
+- **Input/Output**:
+  - Input: The root of a binary tree (`root`).
+  - Output: The maximum depth of the tree, represented as an integer.
+- **Data Structures Used**:
+  - Binary Tree.
+- **Algorithms Used**:
+  - Depth-First Search (DFS), Recursion.
+- **Time Complexity**:
+  - O(n), where `n` is the number of nodes in the tree. Each node is visited once.
+- **Space Complexity**:
+  - O(h), where `h` is the height of the tree. This accounts for the recursion stack.
+
+####  **Solution Approach**:
+- Implemented a recursive function that traverses the tree using DFS.
+- For each node, the function recursively finds the maximum depth of its left and right subtrees.
+- The maximum of the depths of the left and right subtrees is taken, and `1` is added to account for the depth of the current node.
+- The base case is when the function encounters a `None` node, at which point it returns `0`. This ensures that an integer is always returned, maintaining consistency with the expected return type.
+
+####  **Challenges & Overcoming Them**:
+- Ensuring that the base case returns `0` instead of `None` was crucial for maintaining the integer return type throughout the recursive calls, which is essential for the addition operations in the recursion.
+
+#### **Key Takeaways**:
+- The depth of a node in a binary tree is the maximum depth of its subtrees plus one.
+- Handling the base case correctly is crucial in recursive algorithms, especially in ensuring that the return types are consistent with the operations performed in the recursion.
+
+#### **Additional Notes**:
+- This problem is a fundamental example of applying recursion to tree data structures, demonstrating the elegance and simplicity of recursive solutions for tree traversal and manipulation tasks.
