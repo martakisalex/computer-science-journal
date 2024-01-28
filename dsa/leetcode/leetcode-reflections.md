@@ -884,3 +884,69 @@ This file is not just a record of problems solved but a reflection of my growth 
 
 #### **Additional Notes**:
 - This problem is a fundamental example of applying recursion to tree data structures, demonstrating the elegance and simplicity of recursive solutions for tree traversal and manipulation tasks.
+
+### 24. [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
+
+#### **Problem Overview**:
+- **Difficulty**: Easy
+- **Key Problem Aspects**:
+  - Determining if any value appears at least twice in the given array.
+- **Input/Output**:
+  - Input: An array of integers (`nums`).
+  - Output: `True` if any value appears at least twice in the array, otherwise `False`.
+- **Data Structures Used**:
+  - Set.
+- **Algorithms Used**:
+  - Hashing.
+- **Time Complexity**:
+  - O(n), where `n` is the number of elements in the array. Each element is processed once when adding to the set.
+- **Space Complexity**:
+  - O(n), in the worst case, all elements are unique, and the set contains a copy of each element.
+
+####  **Solution Approach**:
+- Converted the input list into a set, which automatically removes duplicates.
+- Compared the length of the set with the original list. If the set's length is less than the list's, it indicates there were duplicates in the list.
+
+####  **Challenges & Overcoming Them**:
+- The primary challenge was to find an efficient way to check for duplicates without having to compare each element with every other element, which would lead to a less efficient solution.
+- Utilizing a set to hold the elements and leveraging its property of containing unique elements provided an efficient solution.
+
+#### **Key Takeaways**:
+- Sets are a powerful data structure for checking the presence of duplicates in a collection due to their property of storing unique elements.
+- The problem highlights the importance of understanding data structures and their properties to devise efficient algorithms.
+
+#### **Additional Notes**:
+- This problem is a common example used to illustrate the usage of hash tables and sets in solving problems that involve checking for uniqueness or duplicates within a collection.
+
+### 25. [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+
+#### **Problem Overview**:
+- **Difficulty**: Medium
+- **Key Problem Aspects**:
+  - Finding the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+- **Input/Output**:
+  - Input: An integer array `nums`.
+  - Output: The sum of the maximum subarray.
+- **Data Structures Used**:
+  - Array.
+- **Algorithms Used**:
+  - Dynamic Programming, Kadane's Algorithm.
+- **Time Complexity**:
+  - O(n), where `n` is the length of the array. Each element is processed once.
+- **Space Complexity**:
+  - O(1), as only two variables (`max_sum` and `current_sum`) are used, regardless of the input size.
+
+####  **Solution Approach**:
+- Initialized `max_sum` and `current_sum` with the first element of `nums` to handle the case where `nums` contains only one element or all negative numbers.
+- Iterated through the array starting from the second element.
+- For each element, updated `current_sum` by taking the maximum between the current element added to `current_sum` and the current element itself. This decision ensures that `current_sum` always represents the maximum sum of the current subarray.
+- Updated `max_sum` to hold the maximum value between the current `max_sum` and the new `current_sum`. This ensures that `max_sum` always holds the largest sum encountered so far.
+- Returned `max_sum` as the result.
+
+#### **Key Takeaways**:
+- Kadane's Algorithm is an efficient way to solve the maximum subarray problem by maintaining a running sum and updating the maximum sum found at each step.
+- The algorithm is an excellent example of dynamic programming where the optimal solution of the current state depends on the previous state.
+
+#### **Additional Notes**:
+- This problem is fundamental in understanding the concept of dynamic programming and how it applies to optimizing solutions by breaking them down into simpler subproblems.
+- The problem also highlights the importance of edge cases, such as arrays with only negative numbers or a single element.
