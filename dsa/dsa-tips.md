@@ -2,6 +2,8 @@
 
 Whenever we come across questions with multiple strings, it is best to think if Trie can help us.
 
+As you write each line of code, ask yourself why you are writing what you are and if you are accessing/manipulating the proper data.
+
 ## Logic Statement
 
 ```python
