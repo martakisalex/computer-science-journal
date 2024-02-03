@@ -950,3 +950,37 @@ This file is not just a record of problems solved but a reflection of my growth 
 #### **Additional Notes**:
 - This problem is fundamental in understanding the concept of dynamic programming and how it applies to optimizing solutions by breaking them down into simpler subproblems.
 - The problem also highlights the importance of edge cases, such as arrays with only negative numbers or a single element.
+
+### 26. [Insert Interval](https://leetcode.com/problems/insert-interval/)
+
+#### **Problem Overview**:
+- **Difficulty**: Medium
+- **Key Problem Aspects**:
+  - Inserting a new interval into a list of non-overlapping intervals, merging if necessary.
+- **Input/Output**:
+  - Input: A list of non-overlapping intervals `intervals` sorted by their start times, and a new interval `newInterval`.
+  - Output: The new list of intervals after insertion and merging of `newInterval`.
+- **Data Structures Used**:
+  - List of intervals (List[List[int]]).
+- **Algorithms Used**:
+  - Iteration through intervals with conditions for merging.
+- **Time Complexity**:
+  - O(n), where `n` is the number of intervals. Each interval is processed once.
+- **Space Complexity**:
+  - O(n), in the worst case, all intervals might be merged into the new interval, requiring a new list.
+
+####  **Solution Approach**:
+- Initialized an empty list `new_intervals` to store the result.
+- Used three `while` loops to process intervals before, overlapping with, and after the `newInterval`.
+1. **First While Loop**: Added intervals to `new_intervals` that end before `newInterval` starts, ensuring no overlap.
+2. **Second While Loop**: Merged intervals that overlap with `newInterval` by updating `newInterval` to the encompassing interval, then added it to `new_intervals`.
+3. **Third While Loop**: Added the remaining intervals that start after `newInterval` ends.
+- Returned `new_intervals` as the final list of merged intervals.
+
+#### **Key Takeaways**:
+- Efficiently handling interval merging by categorizing intervals into three groups: before, overlapping, and after the new interval.
+- The use of a temporary interval (`newInterval`) for merging overlapping intervals simplifies the logic and reduces complexity.
+
+#### **Additional Notes**:
+- This problem demonstrates a common pattern in interval problems where the key challenge is to identify and merge overlapping intervals while adding non-overlapping intervals as is.
+- Understanding the sorting property of the given intervals is crucial for an efficient solution, allowing for linear time complexity.
