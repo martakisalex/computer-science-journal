@@ -1,6 +1,6 @@
 # Xcode
 
-<img src="https://cdn.icon-icons.com/icons2/3053/PNG/512/xcode_macos_bigsur_icon_189539.png" width="100" height="100">
+<img src="https://cdn.icon-icons.com/icons2/3053/PNG/512/xcode_macos_bigsur_icon_189539.png" height="100">
 
 ## Overview
 
