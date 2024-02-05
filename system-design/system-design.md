@@ -1,6 +1,6 @@
 # System Design
 
-<img src="https://cdn-icons-png.flaticon.com/512/4529/4529226.png" width="100" height="100">
+<img src="https://cdn-icons-png.flaticon.com/512/4529/4529226.png" height="100">
 
 ## Overview
 
