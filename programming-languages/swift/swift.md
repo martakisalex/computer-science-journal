@@ -1,6 +1,6 @@
 # Swift
 
-<img src="https://cdn.freebiesupply.com/logos/large/2x/swift-15-logo-png-transparent.png" width="100" height="100">
+<img src="https://cdn.freebiesupply.com/logos/large/2x/swift-15-logo-png-transparent.png" height="100">
 
 ## Overview
 
