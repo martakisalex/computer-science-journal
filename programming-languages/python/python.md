@@ -1,6 +1,6 @@
 # Python
 
-<img src="https://www.pinclipart.com/picdir/big/570-5708783_logo-python-python-logo-clipart.png" width="100" height="100">
+<img src="https://www.pinclipart.com/picdir/big/570-5708783_logo-python-python-logo-clipart.png" height="100">
 
 ## Overview
 
