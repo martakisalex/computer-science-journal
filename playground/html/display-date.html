@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Date</title>
+    <script>
+        function displayDate(){
+            dateElement = document.getElementById("dateElement");
+            dateElement.textContent = Date();
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="displayDate()">Display Date</button>
+    <h1 id="dateElement">No Date Displaying</h1>
+</body>
+</html>
