@@ -8,7 +8,6 @@ This convention allows web developers to specify the entry point of a website or
 
 The `index.html` file typically contains the HTML structure of the site's homepage or main landing page. It sets the tone for the website's content, design, and navigation structure.
 
-
 ## HTML elements
 
 An HTML element is **anything** from the start tag to the end tag
@@ -23,11 +22,88 @@ While some  HTML elements will display correctly, you should **never** skip the 
 
 HTML is **not** case sensitive. However, it is common practice for tags to be lowercase.
 
+## Anatomy of an HTML element
+
+![Anatomy of an HTML element](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/grumpy-cat-small.png)
+The anatomy of our element is:
+
+**The opening tag**: This consists of the name of the element (in this example, p for paragraph), wrapped in opening and closing angle brackets. This opening tag marks where the element begins or starts to take effect. In this example, it precedes the start of the paragraph text.
+
+**The content**: This is the content of the element. In this example, it is the paragraph text.
+
+**The closing tag**: This is the same as the opening tag, except that it includes a forward slash before the element name. This marks where the element ends. Failing to include a closing tag is a common beginner error that can produce peculiar results.
+
+The element is the opening tag, followed by content, followed by the closing tag.
+
+## Nesting elements
+
+Elements can be placed within other elements. This is called nesting. If we wanted to state that our cat is **very** grumpy, we could wrap the word very in a `<strong>` element, which means that the word is to have strong(er) text formatting:
+```html
+<p>My cat is <strong>very</strong> grumpy.</p>
+```
+The tags have to open and close in a way that they are inside or outside one another.
+
+## Void Elements
+
+Not all elements follow the pattern of an opening tag, content, and a closing tag. Some elements consist of a single tag, which is typically used to insert/embed something in the document. Such elements are called void elements. For example, the `<img>` element embeds an image file onto a page:
+```html
+<img
+  src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"
+  alt="Firefox icon" />
+```
+
 ## HTML Attributes
+
 - All HTML elements can have attributes
 - Attributes provide additional information about elements
 - Attributes are always specified in the start tag
 - Attributes usually come in name/value pairs like: name="value"
+
+Attributes contain extra information about the element that won't appear in the content.
+
+### Boolean Attributes
+
+*Sometimes you will see attributes written without values*. This is entirely acceptable. These are called Boolean attributes.
+```html
+<input type="text" disabled="disabled" />
+```
+As shorthand, it is acceptable to write this as follows:
+```html
+<input type="text" disabled />
+```
+
+#### Good example of incorrect syntax
+
+```html
+<a href=https://www.mozilla.org/ title=The Mozilla homepage>favorite website</a>
+```
+As written above, the browser misinterprets the markup, mistaking the `title` attribute for three attributes: a title attribute with the value `The`, and two Boolean attributes, `Mozilla` and `homepage`.
+
+Always include the attribute quotes. It avoids such problems, and results in more readable code.
+
+## Anatomy of an HTML document
+
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>My test page</title>
+  </head>
+
+  <body>
+    <p>This is my page</p>
+  </body>
+</html>
+```
+
+### `<!DOCTYPE html>`
+
+The doctype. When HTML was young (1991-1992), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML. Doctypes used to look something like this: 
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+```
+More recently, the doctype is a historical artifact that needs to be included for everything else to work right. `<!DOCTYPE html>` is the shortest string of characters that counts as a valid doctype. That is all you need to know!
 
 ## HTML div
 
