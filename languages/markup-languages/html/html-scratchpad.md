@@ -269,6 +269,7 @@ function displayResult() {
 ```
 
 ## Misc.
+
 You should always include the `lang` attribute inside the `<html>` tag, to declare the language of the Web page. This is meant to assist search engines and browsers.
 
 Country codes can also be added to the language code in the `lang` attribute. So, the first two characters define the language of the HTML page, and the last two characters define the country.
