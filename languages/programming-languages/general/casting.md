@@ -5,11 +5,13 @@ Casting in programming refers to the conversion of one data type into another. I
 ## Types of Casting
 
 ### Implicit Casting (Automatic Conversion)
+
 - **Definition**: The automatic transformation of one data type to another by the compiler.
 - **Example**: Converting an `int` to a `float` in languages like C and Java.
 - **Key Point**: Generally safe but can lead to loss of precision or unintended results if not carefully managed.
 
 ### Explicit Casting (Type Casting)
+
 - **Definition**: Manually converting one data type to another by the programmer.
 - **Syntax**: Involves specifying the desired type in parentheses before the variable.
 - **Example**: `(float)x` converts `x` from `int` to `float`.
