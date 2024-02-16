@@ -52,11 +52,13 @@ This simple example demonstrates creating a React component and rendering it to 
 This Markdown text provides an introductory overview of React, its key features, advantages, use cases, and a basic example to get started. It's suitable for educational materials or documentation related to web development using React.
 
 ## CLI Tools
+
 Here is the list of most common CLI tools for React development:
 - [create-react-app](https://create-react-app.dev/)
 - [vite](https://vitejs.dev/)
 
 ## Create React App
+
 Create React App is the CLI based tool and is the best way to start building a new single-page application in React.
 
 It sets up your development environment so that you can use the latest JavaScript features, provides a nice developer experience, and optimizes your app for production. You’ll need to have Node >= 14.0.0 and npm >= 5.6 on your machine.
@@ -66,6 +68,7 @@ Visit the following resources to learn more:
 - [Advanced: Custom Setup with Webpack](https://www.robinwieruch.de/minimal-react-webpack-babel-setup/)
 
 ## Components
+
 Components are the building blocks of React applications. They let us split the UI into independent, reusable pieces, and think about each piece in isolation.
 
 Visit the following resources to learn more:
@@ -74,6 +77,7 @@ Visit the following resources to learn more:
 - [What is the difference between components, elements, and instatnces?](https://www.robinwieruch.de/react-element-component/)
 
 ### Creating and nesting components
+
 React apps are made out of components. A component is a piece of the UI (user interface) that has its own logic and appearance. A component can be as small as a button, or as large as an entire page.
 
 React components are JavaScript functions that return markup:
@@ -101,5 +105,6 @@ export default function MyApp() {
 Notice that `<MyButton />` starts with a capital letter. That’s how you know it’s a React component. React component names must always start with a capital letter, while HTML tags must be lowercase.
 
 ## Helpful Links
+
 - [explain like I'm five](https://dev.to/bartzalewski/explain-like-im-5-front-end-developer-interview-questions-2024-92n)
 - [bunderler](https://snipcart.com/blog/javascript-module-bundler)
