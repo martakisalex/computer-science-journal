@@ -365,7 +365,7 @@ This file is not just a record of problems solved but a reflection of my growth 
 - **Algorithms Used**:
   - Depth-First Search (DFS).
 - **Time Complexity**:
-  - O(n) - Linear, where n is the number of pixels in the image.
+  - O(m * n) - Where `n` times `m` is the number of pixels in the image.
 - **Space Complexity**:
   - O(h) - The maximum depth of the recursion stack, where h is the height of the stack.
 
