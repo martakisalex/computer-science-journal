@@ -28,10 +28,7 @@ The traffic to your web server comes from two sources: web application and mobil
 
 With the growth of the user base, one server is not enough, and we need multiple servers: one for web/mobile traffic, the other for the database. Separating web/mobile traffic (web tier) and database (data tier) servers allows them to be scaled independently.
 
-
 Relational databases are also called a relational database management system (RDBMS) or SQL database.
-
-Non-Relational databases are also called NoSQL databases.
 
 Non-Relational databases are also called NoSQL databases.
 
