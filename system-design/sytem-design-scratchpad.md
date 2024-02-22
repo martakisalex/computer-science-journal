@@ -38,3 +38,33 @@ Non-relational databases might be the right choice if:
 - Your application requires super-low latency.
 - Your data are unstructured, or you do not have any relational data.
 - You only need to serialize and deserialize data (JSON, XML, YAML, etc.). • You need to store a massive amount of data.
+
+### Vertical Scaling vs Horizontal Scaling
+
+**Vertical scaling**, referred to as “scale up”, means the process of adding more power (CPU, RAM, etc.) to your servers.
+
+**Horizontal scaling**, referred to as “scale-out”, allows you to scale by adding more servers into your pool of resources. Horizontal scaling is more desirable for large scale applications due to the limitations of vertical scaling.
+
+### Load Balancer
+
+A load balancer evenly distributes incoming traffic among web servers that are defined in a load-balanced set.
+
+The load balancer communicates with web servers through private IPs.
+
+If a load balancer and a second web server are added, one successfully solves no failover issue and improved the availability of the web tier.
+- If server 1 goes offline, all the traffic will be routed to server 2. This prevents the website from going offline. We will also add a new healthy web server to the server pool to balance the load.
+- If the website traffic grows rapidly, and two servers are not enough to handle the traffic, the load balancer can handle this problem gracefully. You only need to add more servers to the web server pool, and the load balancer automatically starts to send requests to them.
+
+### Database Replication
+
+Database replication can be used in many database management systems, usually with a master/slave relationship between the original (master) and the copies (slaves).
+
+A master database generally only supports write operations. A slave database gets copies of the data from the master database and only supports read operations.
+
+All the data-modifying commands like insert, delete, or update must be sent to the master database.
+
+*Most applications require a much higher ratio of reads to writes; thus, the number of slave databases in a system is usually larger than the number of master databases.*
+
+What if one of the databases goes offline?
+- If only one slave database is available and it goes offline, read operations will be directed to the master database temporarily.
+- If the master database goes offline, a slave database will be promoted to be the new master. 
