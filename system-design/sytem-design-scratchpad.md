@@ -67,4 +67,35 @@ All the data-modifying commands like insert, delete, or update must be sent to t
 
 What if one of the databases goes offline?
 - If only one slave database is available and it goes offline, read operations will be directed to the master database temporarily.
-- If the master database goes offline, a slave database will be promoted to be the new master. 
+- If the master database goes offline, a slave database will be promoted to be the new master.
+
+### Cache
+
+A cache is a temporary storage area that stores the result of expensive responses or frequently accessed data in memory so that subsequent requests are served more quickly.
+
+#### Cache Tier
+
+The cache tier is a temporary data store layer, much faster than the database.
+
+After receiving a request, a web server first checks if the cache has the available response. If it has, it sends data back to the client. If not, it queries the database, stores the response in cache, and sends it back to the client. This caching strategy is called a **read-through cache**.
+
+#### Considerations for using cache
+
+Here are a few considerations for using a cache system:
+- Decide when to use cache. Consider using cache when data is read frequently but modified infrequently.
+- Expiration policy. It is a good practice to implement an expiration policy. Once cached data is expired, it is removed from the cache.
+- Consistency: This involves keeping the data store and the cache in sync. Inconsistency can happen because data-modifying operations on the data store and cache are not in a single transaction.
+- Mitigating failures: A single cache server represents a potential single point of failure (SPOF).
+- Eviction Policy: Once the cache is full, any requests to add items to the cache might cause existing items to be removed. This is called cache eviction.
+
+### Content Delivery Network (CDN)
+
+A CDN is a network of geographically dispersed servers used to deliver static content. CDN servers cache static content like images, videos, CSS, JavaScript files, etc.
+
+Here is how CDN works at the high-level: when a user visits a website, a CDN server closest to the user will deliver static content. Intuitively, the further users are from CDN servers, the slower the website loads.
+
+#### Considerations of using a CDN
+
+- Cost: CDNs are run by third-party providers, and you are charged for data transfers in and out of the CDN.
+- Setting an appropriate cache expiry: For time-sensitive content, setting a cache expiry time is important.
+- CDN fallback: You should consider how your website/application copes with CDN failure.
