@@ -99,3 +99,13 @@ Here is how CDN works at the high-level: when a user visits a website, a CDN ser
 - Cost: CDNs are run by third-party providers, and you are charged for data transfers in and out of the CDN.
 - Setting an appropriate cache expiry: For time-sensitive content, setting a cache expiry time is important.
 - CDN fallback: You should consider how your website/application copes with CDN failure.
+
+### Stateless Web Tier
+
+Now it is time to consider scaling the web tier horizontally. For this, we need to move state (for instance user session data) out of the web tier. A good practice is to store session data in the persistent storage such as relational database or NoSQL. Each web server in the cluster can access state data from databases. This is called stateless web tier.
+
+### Stateful Architecture
+
+ A stateful server remembers client data (state) from one request to the next.
+
+ 
