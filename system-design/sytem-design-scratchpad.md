@@ -2,7 +2,7 @@
 
 ## Forward
 
-The questions require the interviewees to design an architecture for a software system, which could be a news feed, Google search, chat system, etc. 
+The questions require the interviewees to design an architecture for a software system, which could be a news feed, Google search, chat system, etc.
 
 These questions are intimidating, and there is no certain pattern to follow.
 
@@ -35,6 +35,7 @@ Non-Relational databases are also called NoSQL databases.
 These databases are grouped into four categories: key-value stores, graph stores, column stores, and document stores. Join operations are generally not supported in non-relational databases.
 
 Non-relational databases might be the right choice if:
+
 - Your application requires super-low latency.
 - Your data are unstructured, or you do not have any relational data.
 - You only need to serialize and deserialize data (JSON, XML, YAML, etc.). • You need to store a massive amount of data.
@@ -52,6 +53,7 @@ A load balancer evenly distributes incoming traffic among web servers that are d
 The load balancer communicates with web servers through private IPs.
 
 If a load balancer and a second web server are added, one successfully solves no failover issue and improved the availability of the web tier.
+
 - If server 1 goes offline, all the traffic will be routed to server 2. This prevents the website from going offline. We will also add a new healthy web server to the server pool to balance the load.
 - If the website traffic grows rapidly, and two servers are not enough to handle the traffic, the load balancer can handle this problem gracefully. You only need to add more servers to the web server pool, and the load balancer automatically starts to send requests to them.
 
@@ -66,6 +68,7 @@ All the data-modifying commands like insert, delete, or update must be sent to t
 *Most applications require a much higher ratio of reads to writes; thus, the number of slave databases in a system is usually larger than the number of master databases.*
 
 What if one of the databases goes offline?
+
 - If only one slave database is available and it goes offline, read operations will be directed to the master database temporarily.
 - If the master database goes offline, a slave database will be promoted to be the new master.
 
@@ -82,6 +85,7 @@ After receiving a request, a web server first checks if the cache has the availa
 #### Considerations for using cache
 
 Here are a few considerations for using a cache system:
+
 - Decide when to use cache. Consider using cache when data is read frequently but modified infrequently.
 - Expiration policy. It is a good practice to implement an expiration policy. Once cached data is expired, it is removed from the cache.
 - Consistency: This involves keeping the data store and the cache in sync. Inconsistency can happen because data-modifying operations on the data store and cache are not in a single transaction.
@@ -107,5 +111,3 @@ Now it is time to consider scaling the web tier horizontally. For this, we need 
 ### Stateful Architecture
 
  A stateful server remembers client data (state) from one request to the next.
-
- 
