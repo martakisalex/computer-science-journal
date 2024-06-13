@@ -984,3 +984,82 @@ This file is not just a record of problems solved but a reflection of my growth 
 #### **Additional Notes**:
 - This problem demonstrates a common pattern in interval problems where the key challenge is to identify and merge overlapping intervals while adding non-overlapping intervals as is.
 - Understanding the sorting property of the given intervals is crucial for an efficient solution, allowing for linear time complexity.
+
+### 27. [01 Matrix](https://leetcode.com/problems/01-matrix/)
+
+#### **Problem Overview**:
+- **Difficulty**: Medium
+- **Key Problem Aspects**:
+  - Given an `m x n` binary matrix `mat`, return the distance of the nearest 0 for each cell.
+  - The distance between two adjacent cells is 1.
+- **Input/Output**:
+  - Input: An `m x n` binary matrix `mat`.
+  - Output: An `m x n` matrix where each cell contains the distance to the nearest 0.
+- **Data Structures Used**:
+  - Queue (using `collections.deque`) for BFS traversal.
+  - Matrix (2D list) to store distances.
+- **Algorithms Used**:
+  - Breadth-First Search (BFS) for traversing the matrix and updating distances.
+- **Time Complexity**:
+  - O(n * m), where `n` is the number of rows and `m` is the number of columns. Each cell is visited at least once.
+- **Space Complexity**:
+  - O(n * m), due to the space needed for the queue which can hold up to `n * m` elements in the worst case.
+
+#### **Solution Approach**:
+- Initialize a queue and populate it with the indices of all 0s in the matrix.
+- Set all non-zero cells to infinity (`float('inf')`) to mark them as unvisited.
+- Use BFS to explore each cell in the queue:
+  - For each cell, check its four possible neighbors (up, down, left, right).
+  - If a neighbor cell's current value is greater than the current cell's value plus one, update the neighbor's value and add it to the queue.
+- Continue this process until all cells have been visited and updated with the correct distances.
+
+```python
+class Solution(object):
+    def updateMatrix(self, mat):
+        """
+        :type mat: List[List[int]]
+        :rtype: List[List[int]]
+        """
+
+        index_queue = deque()
+
+        for i in range(len(mat)):
+            for j in range(len(mat[0])):
+                if mat[i][j] == 0:
+                    index_queue.append((i, j))
+                else:
+                    mat[i][j] = float('inf')
+
+        while index_queue:
+            current_index = index_queue.popleft()
+            r = current_index[0]
+            c = current_index[1]
+            directions = ((0, 1), (1, 0), (-1, 0), (0, -1))
+
+            for dr, dc in directions:
+                nr = r + dr
+                nc = c + dc
+
+                if 0 <= nr < len(mat) and 0 <= nc < len(mat[0]):
+                    if mat[nr][nc] > mat[r][c] + 1:
+                        mat[nr][nc] = mat[r][c] + 1
+                        index_queue.append((nr, nc))
+
+        return mat
+
+        # TC: O(n * m) where we visit every index in all rows and columns
+        # SC: O(n * m) where the queue can be equal to the number of indices in the matrix
+```
+
+#### **Challenges & Overcoming Them**:
+- Initially used a list for the queue but switched to `deque` for more efficient append and pop operations.
+- Initially used lists for coordinates but switched to tuples for immutability and performance benefits.
+
+#### **Key Takeaways**:
+- BFS is effective for finding the shortest path in an unweighted grid.
+- Using `deque` for BFS ensures optimal performance for queue operations.
+- Representing coordinates as tuples instead of lists can provide minor performance and readability benefits.
+
+#### **Additional Notes**:
+- The solution ensures that each cell's distance is calculated in a manner that guarantees the shortest path to the nearest 0.
+- Using infinity (`float('inf')`) to initialize non-zero cells makes it clear which cells have not yet been processed.
