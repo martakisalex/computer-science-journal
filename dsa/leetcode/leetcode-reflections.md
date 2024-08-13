@@ -74,6 +74,19 @@ This file is not just a record of problems solved but a reflection of my growth 
 - **Space Complexity**:
   - O(n) - Extra space is required for the hash table, which in the worst case needs to store all elements from the array.
 
+#### **Solution**
+```python
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        num_to_index = dict()
+        for index, num in enumerate(nums):
+            complement = target - num
+            if complement in num_to_index:
+                return [num_to_index[complement], index]
+            num_to_index[num] = index
+        return None
+```
+
 ####  **Solution Approach**:
 - Utilized a hash table (dictionary in Python) to store and quickly access the numbers encountered in the array.
 - Iterated through the array using a `for` loop with `enumerate`, which provides both the index and the value of each item in the array.
@@ -93,6 +106,7 @@ This file is not just a record of problems solved but a reflection of my growth 
 #### **Additional Notes**:
 - This approach highlights the importance of choosing the right data structure for the problem at hand.
 - It also demonstrates a common pattern in solving array-related problems where you need to find pairs that satisfy certain conditions.
+- Using `dict()` to create an empty dictionary is a clear and explicit approach. While `{}` is more concise, `dict()` can be preferred for consistency in contexts where other data structures like `list()` or `set()` are being initialized using constructors.
 
 ### 2. [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
 
